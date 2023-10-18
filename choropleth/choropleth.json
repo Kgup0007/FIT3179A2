@@ -1,5 +1,5 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "the population per state, engineers per state, and hurricanes per state",
     "title": {"text": "Theft and Break and Enter Crimes in Boston Neighborhoods","fontSize": 16},
     "repeat": {"row": ["Theft (%)", "Break and Enter (%)"]},
@@ -10,9 +10,9 @@
     },
     "spec": {
         "width": 600,
-        "height": 600,
+        "height": 350,
         "data": {
-            "url": "https://raw.githubusercontent.com/Kgup0007/FIT3179/main/Data/theft_break.csv"
+            "url": "https://raw.githubusercontent.com/Kgup0007/FIT3179/main/choropleth/Data/theft_break.csv"
         },
         "transform": [
             {
@@ -27,15 +27,15 @@
                 "lookup": "Neighbourhood",
                 "from": {
                 "data": {
-                    "url": "https://raw.githubusercontent.com/Kgup0007/FIT3179/main/choropleth/boston.json",
-                    "format": {"type": "topojson","feature": "Boston" }
+                    "url": "https://raw.githubusercontent.com/Kgup0007/FIT3179/main/boston_neighborhoods%20(1).json",
+                    "format": {"type": "topojson","feature": "boston_neighborhoods" }
                 },
                 "key": "properties.name"
                 },
                 "as": "geo"
             }
         ],
-        "projection": {"type": "conicConformal"},
+        "projection": {"type": "equirectangular"},
         "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.2},
         "encoding": {
             "shape": {
