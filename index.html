@@ -11,20 +11,20 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- custom style-->
     <style>
         *{
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Montessarat', sans-serif;
         }
         h1{
             font-size: 2.5em;
-            font-family: 'Merriweather', serif;
+            font-family: 'Montserrat', serif;
             color: red;
         }
         h2{
-            font-family: 'Merriweather', serif;
+            font-family: 'Montserrat', serif;
         }
         h3{
             font-weight: bold;
@@ -33,15 +33,19 @@
             font-size: 0.9em;
         }
         body{
-            background-color: lightgrey;
+            background-color: rgb(236, 190, 190);
+            background-image: url('IMG_5703.jpg');
+            background-position: center center;
+            background-size: cover;
         }
         .page{
             width: 1000px;
             height: auto;
-            background-color: white;   
+            background-color: rgb(255, 236, 236);   
             margin: auto;
             padding: 50px;
             padding-top: 35px;
+            
         }
         .vis-container{
             width: 100%;
@@ -109,8 +113,8 @@
         <!-- pure grid group -->
         <!-- Heading -->
         <div class="pure-g">
-            <div class="pure-u-1-2">
-                <h1>Crime in Boston</h1>
+            <div class="pure-u-1-1">
+                <h1>Has Boston gotten safter?</h1>
             </div>
             <div class="pure-u-1">
                 <div class="sub-heading">
@@ -161,16 +165,16 @@ There are a number of factors that contribute to the high crime rates in these n
                 <div class="description-left">
                     <h2>Types of Crime</h2>
                     <p>
-                        There are various criminal activities happening in Vancouver and the similar types of crime have
-                        been grouped together to show the overview. The <span class="bold_text">most common crime</span> in Vancouver is 
-                        <span class="theft_text">Theft</span> which includes motor vehicle theft, robbery and etc. 
+                        There are various criminal activities happening in Boston and the similar types of crime have
+                        been grouped together to show the overview. The <span class="bold_text">most common crime</span> in Boston is
+                        <span class="theft_text">Larceny-Theft</span> (red), which includes larceny, burglary, and motor vehicle theft.
                     </p>
+                      
                     <p>
-                        Based on the donut chart, <span class="break_and_enter_text">Break and Enter</span> is having the <span class="bold_text">second highest</span> amount
-                        of <span class="bold_text">crime records followed by </span>  <span class="mischief_text">Mischief</span>. <span class="homicide_text">Homicide</span> 
+                        Based on the donut chart, <span class="bold_text">Violent Crime</span> (orange) is having the <span class="bold_text">second highest</span> amount
+                        of <span class="bold_text">crime records followed by </span>  <span class="mischief_text">Mischief</span> (blue). <span class="homicide_text">Homicide</span> (black)
                         is the <span class="bold_text">rarest crime type</span> which contributes only a little to the entire crime proportion.
                     </p>
-
                 </div>
             </div>
             <div class="pure-u-3-5">
@@ -182,6 +186,7 @@ There are a number of factors that contribute to the high crime rates in these n
         <div class="pure-g">
             <div class="pure-u-3-5" style="margin-left: -2mm; margin-top: 4mm;">
                 <div id="choropleth" class="vis-container"></div>
+                <div id="box1" class="box">Box1</div>
             </div>
             <div class="pure-u-2-5" style="margin-top: 4.5mm;">
                 <div class="description-right">
