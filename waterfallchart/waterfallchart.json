@@ -5,7 +5,7 @@
   },
   "width": "container",
   "height": 450,
-  "title": {"text": "Number Of Crimes Over Years (2007-2021)", "fontSize": 20},
+  "title": {"text": "Number Of Crimes Over Years (2005-2021)", "fontSize": 20},
   "transform": [
     {"window": [{"op": "sum", "field": "amount", "as": "sum"}]},
     {"window": [{"op": "lead", "field": "year", "as": "lead"}]},
@@ -22,10 +22,10 @@
       "as": "amount"
     },
     {
-      "calculate": "(datum.year !== '2007' && datum.year !== 'Total' && datum.amount > 0 ? '+' : '') + datum.amount",
+      "calculate": "(datum.year !== '2005' && datum.year !== 'Total' && datum.amount > 0 ? '+' : '') + datum.amount",
       "as": "text_amount"
     },
-    {"calculate": "(datum.year !== '2007' && datum.year !== 'Total') ? (datum.sum + datum.previous_sum) / 2 : (0 + datum.sum) / 2", "as": "center"},
+    {"calculate": "(datum.year !== '2005' && datum.year !== 'Total') ? (datum.sum + datum.previous_sum) / 2 : (0 + datum.sum) / 2", "as": "center"},
     {
       "calculate": "datum.sum < datum.previous_sum ? datum.sum : ''",
       "as": "sum_dec"
@@ -58,7 +58,7 @@
         "color": {
           "condition": [
             {
-              "test": "datum.year === '2007' || datum.year === 'Total'",
+              "test": "datum.year === '2005' || datum.year === 'Total'",
               "value": "#f0c575"
             },
             {"test": "datum.sum < datum.previous_sum", "value": "#5ba47d"}
@@ -103,7 +103,7 @@
         "color": {
           "condition": [
             {
-              "test": "datum.year === '2007' || datum.year === 'Total'",
+              "test": "datum.year === '2005' || datum.year === 'Total'",
               "value": "black"
             }
           ],
